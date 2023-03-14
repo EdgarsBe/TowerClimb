@@ -11,10 +11,13 @@ public class ActiveTeleportRay : MonoBehaviour
     public InputActionProperty leftActive;
     public InputActionProperty rightActive;
 
+    public InputActionProperty leftCancel;
+    public InputActionProperty rightCancel;
+
     // Update is called once per frame
     void Update()
     {
-        leftTeleport.SetActive(leftActive.action.ReadValue<float>() > 0.1f);
-        rightTeleport.SetActive(rightActive.action.ReadValue<float>() > 0.1f);
+        leftTeleport.SetActive(leftCancel.action.ReadValue<float>() == 0 && leftActive.action.ReadValue<float>() > 0.1f);
+        rightTeleport.SetActive(rightCancel.action.ReadValue<float>() == 0 && rightActive.action.ReadValue<float>() > 0.1f);
     }
 }
