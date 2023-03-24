@@ -17,6 +17,8 @@ MonoBehaviour:
   - Teleportation
   - Grabing
   - Interact
+  - Lamp
+  - Tools
   - 
   - 
   - 
@@ -42,6 +44,4 @@ MonoBehaviour:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Teleport
